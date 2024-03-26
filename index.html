@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <title>Internship Project</title>
+
+    <!-- Include Handlebars from a CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <nav>
+        <div class="logo">Cavendish International</div>
+        <button id="hamburger-btn" class="hamburger-btn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div id="nav-menu" class="menu">
+          <!-- Handlebars template for the navigation menu -->
+          <script id="nav-menu-template" type="text/x-handlebars-template">
+            <ul>
+              {{#each menuItems}}
+                <li><a href="{{url}}">{{name}}</a></li>
+              {{/each}}
+            </ul>
+          </script>
+        </div>
+      </nav>
+    </div>
+
+    <div class="hero">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper" id="swiper-wrapper"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+
+    <div class="enroll">
+      <div class="banner">Enroll now for the June 2024 intake</div>
+
+      <div class="container">
+        <div class="enroll-inner">
+          <div>
+            Invent <br />
+            <span class="red-text">
+              A <span class="text-style-2">New You</span>
+            </span>
+            with us <br /><span class="text-style-3">Disruptive Education</span>
+          </div>
+          <div><img src="assets/images/img1.jpeg" alt="" /></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="image-section">
+      <img src="assets/images/img2.jpeg" alt="" />
+    </div>
+
+    <div class="container">
+      <div class="content-box">
+        <div>
+          <h2>Learn English from scratch.</h2>
+          <p>
+            Learn everything holding you from being that top level executive.
+            The CEO. Take the first step. The four skills of reading, writing,
+            speaking and listening alone ever took one anywhere. There are more
+            important skills behind a professional. Wanna learn those? Wanna
+            sound an expert in your subject? Wanna learn your subject in English
+            and be a presenter and an effective analyst? Come on. Just tap on
+            the Whats App button. Or just call.
+          </p>
+
+          <a href="#"><div class="button"></div></a>
+        </div>
+
+        <div>
+          <img src="assets/images/Group 49.png" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <div class="cta">
+      <div class="container">
+        <p>
+          Transforming Education Worldwide Cavendish International's Global
+          Footprint from <span class="red-text text-style-4">London</span> to
+          <span class="red-text text-style-4">Europe, Sri Lanka</span>, and
+          <span class="red-text text-style-4">Nigeria</span>
+        </p>
+      </div>
+    </div>
+
+    <div class="posts">
+      <div class="container">
+        <div class="posts-title">
+          <h3>Recent Posts</h3>
+          <a href="posts.html">see all</a>
+        </div>
+
+        <div class="posts-grid" id="posts-container">
+          <!-- Include Handlebars template -->
+          <script id="posts-template" type="text/x-handlebars-template">
+            {{#each posts}}
+              <div class="post-card">
+                <div>
+                  <img src="{{cover-image}}" alt="" />
+                  <div class="post-card-meta">
+                    <div class="post-card-date">{{date}}</div>
+                    <div class="post-card-reading-time">{{reading-time}}
+                      min read</div>
+                    <div class="post-card-views">2 views</div>
+                  </div>
+                </div>
+                <h1>
+                  {{title}}
+                </h1>
+                <a onclick="handleClick('{{id}}')">see all</a>
+              </div>
+            {{/each}}
+          </script>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact">
+      <div class="container">
+        <h2>Stay informed, join our newsletter</h2>
+        <form>
+          <label>Enter Email</label>
+          <input type="text" name="" id="" placeholder="email here" />
+          <label>Enter Full Name</label>
+          <input type="text" name="" id="" placeholder="full name here" />
+          <button>Subscribe</button>
+        </form>
+      </div>
+    </div>
+
+    <footer>
+      <div class="container">
+        <div class="footer-menu-layout">
+          <div>
+            <h4>Branches</h4>
+            <p>London to Europe, Sri Lanka, and Nigeria</p>
+          </div>
+
+          <div>
+            <h4>Haqida</h4>
+            <ul>
+              <li><a href="#">Book Online</a></li>
+              <li><a href="#"> About Us</a></li>
+              <li><a href="#">Our Service</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4>Links</h4>
+            <ul>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Help & Support</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4>Contact</h4>
+            <ul>
+              <li><a href="#">Download Android App</a></li>
+              <li><a href="#">Download iOS App</a></li>
+              <li><a href="#">Terms and Condition</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="copyright">Developed By ITEYON</div>
+      </div>
+    </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="assets/js/swiper.js"></script>
+    <script src="assets/js/menu.js"></script>
+    <script src="assets/js/posts.js"></script>
+    <script>
+      const hamburgerBtn = document.getElementById('hamburger-btn');
+const navMenu = document.getElementById('nav-menu');
+
+hamburgerBtn.addEventListener('click', () => {
+  navMenu.classList.toggle('open');
+});
+
+    </script>
+  </body>
+</html>

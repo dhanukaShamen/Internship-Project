@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "title": "Unlocking Your Potential: The Cavendish Approach to Education",
+        "date": "2024-03-16",
+        "cover-image": "assets/images/img1.jpeg",
+        "reading-time": "5"
+    },
+    {
+        "id": 2,
+        "title": "From Classroom to Real Life: Experiential Learning at Cavendish International",
+        "date": "2024-03-16",
+        "cover-image": "assets/images/img2.jpeg",
+        "reading-time": "8"
+    },
+    {
+        "id": 3,
+        "title": "Revolutionizing Education: A Textbook-Free Learning Environment",
+        "date": "2024-03-16",
+        "cover-image": "assets/images/img1.jpeg",
+        "reading-time": "8"
+    }
+]

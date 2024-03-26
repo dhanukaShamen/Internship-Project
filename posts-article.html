@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>News Article</title>
+    <!-- Include Handlebars from a CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/typography.css" />
+  </head>
+  <body>
+    <div class="container">
+      <nav>
+        <div class="logo">Cavendish International</div>
+        <div id="nav-menu" class="menu">
+          <!-- Handlebars template for the navigation menu -->
+          <script id="nav-menu-template" type="text/x-handlebars-template">
+            <ul>
+              {{#each menuItems}}
+                <li><a href="{{url}}">{{name}}</a></li>
+              {{/each}}
+            </ul>
+          </script>
+        </div>
+      </nav>
+    </div>
+
+    <div id="posts-content"></div>
+
+    <!-- Include Showdown library for Markdown to HTML conversion -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/2.0.3/showdown.min.js"></script>
+
+    <!-- Include custom JavaScript -->
+    <script src="assets/js/posts-article.js"></script>
+    <script src="assets/js/menu.js"></script>
+  </body>
+</html>

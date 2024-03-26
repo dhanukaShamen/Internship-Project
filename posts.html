@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- Include Handlebars from a CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <title>Posts</title>
+  </head>
+  <body>
+    <div class="container">
+      <nav>
+        <div class="logo">Cavendish International</div>
+        <div id="nav-menu" class="menu">
+          <!-- Handlebars template for the navigation menu -->
+          <script id="nav-menu-template" type="text/x-handlebars-template">
+            <ul>
+              {{#each menuItems}}
+                <li><a href="{{url}}">{{name}}</a></li>
+              {{/each}}
+            </ul>
+          </script>
+        </div>
+      </nav>
+    </div>
+
+    <div class="posts">
+      <div class="container">
+        <div class="posts-grid" id="posts-container">
+          <!-- Include Handlebars template -->
+          <script id="posts-template" type="text/x-handlebars-template">
+            {{#each posts}}
+              <div class="post-card">
+                <div>
+                  <img src="{{cover-image}}" alt="" />
+                  <div class="post-card-meta">
+                    <div class="post-card-date">{{date}}</div>
+                    <div class="post-card-reading-time">{{reading-time}}
+                      min read</div>
+                    <div class="post-card-views">2 views</div>
+                  </div>
+                </div>
+                <h1>
+                  {{title}}
+                </h1>
+                <a onclick="handleClick('{{id}}')">see all</a>
+              </div>
+            {{/each}}
+          </script>
+        </div>
+      </div>
+    </div>
+    <script src="assets/js/menu.js"></script>
+    <script src="assets/js/posts.js"></script>
+  </body>
+</html>
